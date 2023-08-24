@@ -7,7 +7,7 @@ function _atuin_loader_load \
     end
 
     if status is-interactive; and which atuin >/dev/null
-        atuin init fish | source
+        atuin init fish $_atuin_loader_arguments | source
 
         if "$enable_logging" != false
             echo "Loaded the Atuin fish plugin."
